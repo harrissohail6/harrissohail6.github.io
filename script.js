@@ -508,7 +508,7 @@ function initParticleCanvas() {
             this.speedX = (Math.random() - 0.5) * 0.5;
             this.speedY = (Math.random() - 0.5) * 0.5;
             this.opacity = Math.random() * 0.5 + 0.2;
-            this.color = Math.random() > 0.5 ? '#00D4FF' : '#7B2FFF';
+            this.color = Math.random() > 0.5 ? '#d4af37' : '#4a9eff';
         }
 
         update() {
@@ -544,7 +544,7 @@ function initParticleCanvas() {
 
                 if (distance < 150) {
                     ctx.beginPath();
-                    ctx.strokeStyle = `rgba(0, 212, 255, ${0.1 * (1 - distance / 150)})`;
+                    ctx.strokeStyle = `rgba(212, 175, 55, ${0.08 * (1 - distance / 150)})`;
                     ctx.lineWidth = 0.5;
                     ctx.moveTo(particles[i].x, particles[i].y);
                     ctx.lineTo(particles[j].x, particles[j].y);
@@ -779,4 +779,4 @@ console.log(`
     ║                                                           ║
     ╚═══════════════════════════════════════════════════════════╝
 
-`, 'color: #00D4FF; font-family: monospace; font-size: 10px;');
+`, 'color: #d4af37; font-family: monospace; font-size: 10px;');
