@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Haris Sohail - Electrical Engineer specializing in CAD, renewable energy, and industrial electrical systems">
+    <meta name="keywords" content="Electrical Engineer, CAD Designer, AutoCAD, MicroStation, Renewable Energy, Pakistan">
+    <title>Haris Sohail | Electrical Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Particle Canvas Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-text">HS</span>
+                <span class="logo-dot"></span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="#contact" class="btn btn-primary">Let's Connect</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-globe"></div>
+        <div class="hero-gradient"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge animate-fade-in">
+                    <span class="badge-dot"></span>
+                    Available for opportunities
+                </div>
+                <h1 class="hero-title animate-slide-up">
+                    <span class="title-line">Engineering</span>
+                    <span class="title-line gradient-text">Tomorrow's</span>
+                    <span class="title-line">Infrastructure</span>
+                </h1>
+                <p class="hero-subtitle animate-slide-up delay-1">
+                    Electrical Engineer crafting precise technical solutions for
+                    <span class="rotating-text">
+                        <span class="rotating-word active">industrial systems</span>
+                        <span class="rotating-word">renewable energy</span>
+                        <span class="rotating-word">global clients</span>
+                        <span class="rotating-word">sustainable future</span>
+                    </span>
+                </p>
+                <div class="hero-stats animate-slide-up delay-2">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="3.89">0</span>
+                        <span class="stat-label">CGPA / 4.00</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="50" data-suffix="+">0</span>
+                        <span class="stat-label">Projects Delivered</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="4">0</span>
+                        <span class="stat-label">Enterprise Clients</span>
+                    </div>
+                </div>
+                <div class="hero-cta animate-slide-up delay-3">
+                    <a href="#projects" class="btn btn-primary btn-lg">
+                        View My Work
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual animate-fade-in delay-2">
+                <div class="profile-card">
+                    <div class="profile-image-wrapper">
+                        <img src="assets/images/profile.png" alt="Haris Sohail" class="profile-image" id="profile-img">
+                        <div class="profile-ring"></div>
+                        <div class="profile-ring ring-2"></div>
+                    </div>
+                    <div class="profile-info">
+                        <h3>Haris Sohail</h3>
+                        <p>Electrical Engineer</p>
+                        <div class="profile-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Rawalpindi, Pakistan
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll to explore</span>
+            <div class="scroll-indicator">
+                <div class="scroll-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients/Trust Section -->
+    <section class="clients-section">
+        <div class="container">
+            <p class="clients-label">Trusted by industry leaders</p>
+            <div class="clients-grid">
+                <div class="client-item">
+                    <span class="client-name">CBH Group</span>
+                </div>
+                <div class="client-item">
+                    <span class="client-name">Fortescue</span>
+                </div>
+                <div class="client-item">
+                    <span class="client-name">Synergy</span>
+                </div>
+                <div class="client-item">
+                    <span class="client-name">Overflow Industrial</span>
+                </div>
+                <div class="client-item">
+                    <span class="client-name">USAID</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Precision meets <span class="gradient-text">innovation</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="about-lead">
+                        Detail-oriented Electrical Engineer with hands-on experience in electrical drafting,
+                        schematic design, and CAD documentation. Currently providing electrical design support for
+                        Australian clients through an offshore engineering partnership.
+                    </p>
+                    <p class="about-text">
+                        As the top graduate from National Skills University Islamabad's Electrical Engineering
+                        Technology program with a <strong>3.89/4.00 CGPA</strong>, I combine academic excellence
+                        with practical industry experience. My work spans Single Line Diagrams, panel layouts,
+                        and compliance with Australian electrical standards.
+                    </p>
+                    <p class="about-text">
+                        I'm passionate about renewable energy innovation, having developed a government-funded
+                        solar tracking system that increases energy capture by 40-50% compared to fixed panels.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>Highest CGPA</h4>
+                                <p>In Electrical Engineering Department</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>IGNITE Grant Recipient</h4>
+                                <p>Government-funded research project</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="highlight-content">
+                                <h4>International Experience</h4>
+                                <p>Working with Australian clients</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="about-card">
+                        <div class="card-glow"></div>
+                        <div class="about-stats-grid">
+                            <div class="about-stat">
+                                <span class="about-stat-number">133</span>
+                                <span class="about-stat-label">Credit Hours</span>
+                            </div>
+                            <div class="about-stat">
+                                <span class="about-stat-number">97.3%</span>
+                                <span class="about-stat-label">Completion Rate</span>
+                            </div>
+                            <div class="about-stat">
+                                <span class="about-stat-number">A-</span>
+                                <span class="about-stat-label">Final Grade</span>
+                            </div>
+                            <div class="about-stat">
+                                <span class="about-stat-number">6</span>
+                                <span class="about-stat-label">UN SDGs Addressed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience-section" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Experience</span>
+                <h2 class="section-title">Building <span class="gradient-text">global impact</span></h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot active"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-card">
+                            <div class="card-header">
+                                <div class="job-info">
+                                    <h3 class="job-title">Electrical Engineer</h3>
+                                    <p class="company-name">Advanced Mechanix (Pvt. Ltd)</p>
+                                    <p class="company-partner">Offshore Partner: Overflow Industrial (OFI), Australia</p>
+                                </div>
+                                <div class="job-meta">
+                                    <span class="job-date">Sept 2025 - Present</span>
+                                    <span class="job-type current">Current</span>
+                                </div>
+                            </div>
+                            <ul class="job-responsibilities">
+                                <li>Provide electrical drafting and design support as part of an offshore engineering team partnered with Overflow Industrial (OFI)</li>
+                                <li>Prepare detailed electrical drawings including schematics, Single Line Diagrams (SLDs), General Arrangement drawings, Block diagrams, and panel layouts</li>
+                                <li>Coordinate daily with OFI engineers and project managers to understand design requirements</li>
+                                <li>Ensure all drawings comply with Australian electrical standards and client specifications</li>
+                                <li>Manage projects for major Australian clients including CBH Group, Fortescue, and Synergy</li>
+                            </ul>
+                            <div class="job-tools">
+                                <span class="tool-tag">AutoCAD</span>
+                                <span class="tool-tag">MicroStation</span>
+                                <span class="tool-tag">SLDs</span>
+                                <span class="tool-tag">Panel Layouts</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-card">
+                            <div class="card-header">
+                                <div class="job-info">
+                                    <h3 class="job-title">Hearing Instrument Specialist</h3>
+                                    <p class="company-name">Professional Hearing Solutions (Pvt. Ltd)</p>
+                                </div>
+                                <div class="job-meta">
+                                    <span class="job-date">Sept 2024 - Sept 2025</span>
+                                </div>
+                            </div>
+                            <ul class="job-responsibilities">
+                                <li>Assisted in hearing assessments and recommended suitable hearing equipment</li>
+                                <li>Programmed, fine-tuned, and troubleshot digital hearing aids for optimal performance</li>
+                                <li>Educated clients on device usage, maintenance, and long-term hearing care</li>
+                                <li>Managed client records and contributed to improving overall service quality</li>
+                            </ul>
+                            <div class="job-tools">
+                                <span class="tool-tag">Client Relations</span>
+                                <span class="tool-tag">Technical Support</span>
+                                <span class="tool-tag">Device Programming</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-card">
+                            <div class="card-header">
+                                <div class="job-info">
+                                    <h3 class="job-title">Production Line Engineer (Internship)</h3>
+                                    <p class="company-name">HATO Pakistan (Pvt. Ltd)</p>
+                                </div>
+                                <div class="job-meta">
+                                    <span class="job-date">2023</span>
+                                </div>
+                            </div>
+                            <ul class="job-responsibilities">
+                                <li>Assisted in monitoring and maintaining production line operations</li>
+                                <li>Supported engineers in diagnosing issues and optimizing machine performance</li>
+                                <li>Applied safety procedures, quality standards, and process documentation practices</li>
+                                <li>Collaborated with technicians on assembly processes and continuous improvement</li>
+                            </ul>
+                            <div class="job-tools">
+                                <span class="tool-tag">Production Management</span>
+                                <span class="tool-tag">Quality Control</span>
+                                <span class="tool-tag">Process Optimization</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Featured Project</span>
+                <h2 class="section-title">Innovation in <span class="gradient-text">renewable energy</span></h2>
+            </div>
+            <div class="featured-project">
+                <div class="project-visual">
+                    <div class="project-image-wrapper">
+                        <div class="project-glow"></div>
+                        <div class="project-mockup">
+                            <div class="solar-tracker-visual">
+                                <div class="sun-icon">
+                                    <i class="fas fa-sun"></i>
+                                </div>
+                                <div class="panel-container">
+                                    <div class="solar-panel"></div>
+                                    <div class="tracker-arm"></div>
+                                </div>
+                                <div class="energy-particles">
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <div class="project-badge">
+                        <i class="fas fa-fire"></i>
+                        Government Funded
+                    </div>
+                    <h3 class="project-title">SunSync: Dual-Axis Solar Tracker</h3>
+                    <p class="project-subtitle">With Heat Utilization System</p>
+                    <p class="project-description">
+                        Final Year Project funded by National Grassroot ICT Research Initiative (NGIRI) IGNITE 2023-24.
+                        Designed and developed an innovative dual-axis solar tracking system that maximizes solar energy
+                        capture through intelligent sun-following technology.
+                    </p>
+                    <div class="project-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>40-50%</strong> more energy than fixed panels
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-fire-alt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Heat utilization</strong> for water heating
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="feature-text">
+                                <strong>Dual energy</strong> electrical + thermal
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Arduino</span>
+                        <span class="tech-tag">LDR Sensors</span>
+                        <span class="tech-tag">DC Motors</span>
+                        <span class="tech-tag">L298N Drivers</span>
+                        <span class="tech-tag">CAD Design</span>
+                        <span class="tech-tag">Embedded Systems</span>
+                    </div>
+                    <div class="sdg-section">
+                        <p class="sdg-label">UN Sustainable Development Goals Addressed:</p>
+                        <div class="sdg-grid">
+                            <div class="sdg-item" title="Clean Water and Sanitation">
+                                <span class="sdg-number">6</span>
+                            </div>
+                            <div class="sdg-item" title="Affordable and Clean Energy">
+                                <span class="sdg-number">7</span>
+                            </div>
+                            <div class="sdg-item" title="Decent Work and Economic Growth">
+                                <span class="sdg-number">8</span>
+                            </div>
+                            <div class="sdg-item" title="Industry, Innovation and Infrastructure">
+                                <span class="sdg-number">9</span>
+                            </div>
+                            <div class="sdg-item" title="Sustainable Cities and Communities">
+                                <span class="sdg-number">11</span>
+                            </div>
+                            <div class="sdg-item" title="Climate Action">
+                                <span class="sdg-number">13</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-cta">
+                        <a href="https://drive.google.com/file/d/1dvMkYyLzg7GpIA3zV5TWJwI-4d7HYRzY/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-primary">
+                            <i class="fas fa-book"></i>
+                            Read Full Thesis Report
+                        </a>
+                        <a href="https://ignite.org.pk/wp-content/uploads/2024/09/Shortlisted-FYPs-of-NGIRI-2023-24.pdf" target="_blank" rel="noopener" class="btn btn-secondary">
+                            <i class="fas fa-file-pdf"></i>
+                            View on Official IGNITE List
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Technical Expertise</span>
+                <h2 class="section-title">Skills that <span class="gradient-text">deliver results</span></h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-drafting-compass"></i>
+                        </div>
+                        <h3 class="category-title">CAD Software</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">AutoCAD</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MicroStation</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">SkyCAD</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Proteus</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3 class="category-title">Design Expertise</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Single Line Diagrams</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Schematic Diagrams</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="92"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Panel Layouts</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Block Diagrams</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3 class="category-title">Engineering</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Control Systems</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Renewable Energy</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MATLAB</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Embedded Systems</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="82"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3 class="category-title">Documentation</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Technical Documentation</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="92"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Redline Markups</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">As-built Drawings</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Project Coordination</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications-section" id="certifications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Certifications & Awards</span>
+                <h2 class="section-title">Recognition of <span class="gradient-text">excellence</span></h2>
+            </div>
+            <div class="certs-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">Certificate of Academic Excellence</h3>
+                        <p class="cert-issuer">National Skills University Islamabad</p>
+                        <p class="cert-description">
+                            Awarded for achieving the highest CGPA (3.89/4.00) in the Electrical Engineering
+                            Technology Department at a UNESCO-UNEVOC affiliated institution.
+                        </p>
+                        <div class="cert-footer">
+                            <span class="cert-date">August 2025</span>
+                            <a href="https://drive.google.com/file/d/1mT9tmkZK6C9ctCCWV4thm9OjXzk9-XKZ/view?usp=sharing" target="_blank" rel="noopener" class="cert-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                View Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-car-battery"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">Electric Vehicle Industrial Training (EVIT)</h3>
+                        <p class="cert-issuer">USAID - Power Sector Improvement Activity</p>
+                        <p class="cert-description">
+                            Four-day industrial training program on Electric Vehicle technology, conducted in
+                            collaboration with Electromotives, EZ Bike, and NUST.
+                        </p>
+                        <div class="cert-footer">
+                            <span class="cert-date">January 2025</span>
+                            <a href="https://drive.google.com/file/d/1aepAvFmZWs5YFORzw51HhO572HgIEJed/view?usp=sharing" target="_blank" rel="noopener" class="cert-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                View Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3 class="cert-title">IGNITE Research Grant</h3>
+                        <p class="cert-issuer">National Grassroot ICT Research Initiative</p>
+                        <p class="cert-description">
+                            Government-funded research grant for the SunSync dual-axis solar tracker project
+                            under NGIRI IGNITE 2023-24.
+                        </p>
+                        <div class="cert-footer">
+                            <span class="cert-date">2023-2024</span>
+                            <a href="https://ignite.org.pk/wp-content/uploads/2024/09/Shortlisted-FYPs-of-NGIRI-2023-24.pdf" target="_blank" rel="noopener" class="cert-link">
+                                <i class="fas fa-file-pdf"></i>
+                                View Official List
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education-section" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Education</span>
+                <h2 class="section-title">Academic <span class="gradient-text">foundation</span></h2>
+            </div>
+            <div class="education-grid">
+                <div class="edu-card featured">
+                    <div class="edu-badge">
+                        <i class="fas fa-star"></i>
+                        Top Graduate
+                    </div>
+                    <div class="edu-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="edu-degree">BSc Electrical Engineering Technology</h3>
+                    <p class="edu-school">National Skills University Islamabad</p>
+                    <p class="edu-affiliation">UNESCO-UNEVOC Affiliated Institution</p>
+                    <div class="edu-details">
+                        <div class="edu-detail">
+                            <span class="detail-label">Duration</span>
+                            <span class="detail-value">2021 - 2025</span>
+                        </div>
+                        <div class="edu-detail">
+                            <span class="detail-label">CGPA</span>
+                            <span class="detail-value highlight">3.89 / 4.00</span>
+                        </div>
+                        <div class="edu-detail">
+                            <span class="detail-label">Grade</span>
+                            <span class="detail-value">A-</span>
+                        </div>
+                        <div class="edu-detail">
+                            <span class="detail-label">Credits</span>
+                            <span class="detail-value">133</span>
+                        </div>
+                    </div>
+                    <div class="edu-courses">
+                        <p class="courses-label">Key Courses:</p>
+                        <div class="courses-list">
+                            <span>AI</span>
+                            <span>Control Systems</span>
+                            <span>Renewable Energy</span>
+                            <span>DSP</span>
+                            <span>Power Systems</span>
+                            <span>PLC</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="edu-degree">F.Sc Pre-Engineering</h3>
+                    <p class="edu-school">Govt. College Asghar Mall, Rawalpindi</p>
+                    <div class="edu-details">
+                        <div class="edu-detail">
+                            <span class="detail-label">Year</span>
+                            <span class="detail-value">2019</span>
+                        </div>
+                        <div class="edu-detail">
+                            <span class="detail-label">Grade</span>
+                            <span class="detail-value">B</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <h3 class="edu-degree">Matriculation</h3>
+                    <p class="edu-school">Federal Kintaar College Rawalpindi</p>
+                    <div class="edu-details">
+                        <div class="edu-detail">
+                            <span class="detail-label">Year</span>
+                            <span class="detail-value">2016</span>
+                        </div>
+                        <div class="edu-detail">
+                            <span class="detail-label">Grade</span>
+                            <span class="detail-value">B</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-content">
+                    <div class="section-header">
+                        <span class="section-tag">Get In Touch</span>
+                        <h2 class="section-title">Let's build <span class="gradient-text">something great</span></h2>
+                    </div>
+                    <p class="contact-description">
+                        I'm currently available for freelance projects, full-time opportunities, and
+                        collaborative work. Let's discuss how I can contribute to your team or project.
+                    </p>
+                    <div class="contact-info">
+                        <a href="mailto:harrissohail6@gmail.com" class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">harrissohail6@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+923125331795" class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Phone</span>
+                                <span class="contact-value">+92 312 5331795</span>
+                            </div>
+                        </a>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Rawalpindi, Pakistan</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/haris-sohail-paracha/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/harris_sohail6/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/harris.sohail.12" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                        <!-- Web3Forms Access Key - Get yours at https://web3forms.com -->
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                        <input type="hidden" name="subject" value="New Portfolio Contact from Website">
+                        <input type="hidden" name="from_name" value="Portfolio Contact Form">
+                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject_line">Subject</label>
+                            <input type="text" id="subject_line" name="subject_line" required placeholder="Project Inquiry">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-full">
+                            Send Message
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <span class="logo-text">HS</span>
+                        <span class="logo-dot"></span>
+                    </a>
+                    <p class="footer-tagline">Engineering tomorrow's infrastructure</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/haris-sohail-paracha/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/harris_sohail6/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/harris.sohail.12" target="_blank" rel="noopener" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Haris Sohail. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
