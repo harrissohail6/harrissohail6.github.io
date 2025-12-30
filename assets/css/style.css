@@ -813,8 +813,80 @@ section {
 }
 
 .company-partner {
-    color: var(--color-text-tertiary);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-text-secondary);
     font-size: 13px;
+    margin-top: 6px;
+    padding: 6px 12px;
+    background: linear-gradient(135deg, rgba(0, 81, 255, 0.08) 0%, rgba(124, 58, 237, 0.08) 100%);
+    border: 1px solid rgba(0, 81, 255, 0.15);
+    border-radius: 6px;
+}
+
+.company-partner i {
+    font-size: 12px;
+    color: var(--color-accent-blue);
+}
+
+.company-link {
+    color: var(--color-accent-primary);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0;
+    position: relative;
+    transition: all var(--transition-normal);
+}
+
+.company-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: width var(--transition-normal);
+}
+
+.company-link:hover {
+    color: var(--color-accent-secondary);
+}
+
+.company-link:hover::after {
+    width: 100%;
+}
+
+.company-link i {
+    font-size: 10px;
+    opacity: 0.6;
+    transition: all var(--transition-normal);
+}
+
+.company-link:hover i {
+    opacity: 1;
+    transform: translate(2px, -2px);
+}
+
+.company-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: var(--color-text-tertiary);
+    margin-top: 4px;
+    padding: 4px 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 4px;
+    border-left: 2px solid var(--color-accent-primary);
+}
+
+.company-location i {
+    font-size: 11px;
+    color: var(--color-accent-primary);
 }
 
 .job-meta {
