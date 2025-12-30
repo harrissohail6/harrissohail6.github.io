@@ -32,7 +32,7 @@
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
     /* Spacing */
-    --section-padding: 120px;
+    --section-padding: 80px;
     --container-max: 1200px;
 
     /* Effects */
@@ -575,7 +575,7 @@ section {
 
 .section-header {
     text-align: center;
-    margin-bottom: 64px;
+    margin-bottom: 48px;
 }
 
 .section-tag {
@@ -1858,7 +1858,7 @@ section {
    ============================================ */
 @media (max-width: 1024px) {
     :root {
-        --section-padding: 80px;
+        --section-padding: 64px;
     }
 
     .hero .container {
@@ -1893,21 +1893,33 @@ section {
     }
 
     .skills-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .certs-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .education-grid {
         grid-template-columns: 1fr;
     }
+
+    .project-visual {
+        order: -1;
+    }
+
+    .project-mockup {
+        padding: 40px;
+    }
+
+    .contact-content .section-header {
+        text-align: center;
+    }
 }
 
 @media (max-width: 768px) {
     :root {
-        --section-padding: 60px;
+        --section-padding: 48px;
     }
 
     .nav-menu {
@@ -1962,7 +1974,12 @@ section {
     }
 
     .clients-grid {
-        gap: 32px;
+        gap: 24px;
+        flex-direction: column;
+    }
+
+    .client-name {
+        font-size: 16px;
     }
 
     .timeline-item {
@@ -1980,6 +1997,58 @@ section {
         min-height: auto;
     }
 
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .job-meta {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .company-partner {
+        flex-wrap: wrap;
+        font-size: 12px;
+    }
+
+    .company-location {
+        font-size: 12px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-highlights {
+        gap: 16px;
+    }
+
+    .highlight-item {
+        padding: 16px;
+    }
+
+    .project-title {
+        font-size: 24px;
+    }
+
+    .project-cta {
+        flex-direction: column;
+    }
+
+    .project-cta .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .sdg-grid {
+        flex-wrap: wrap;
+    }
+
     .footer-content {
         flex-direction: column;
         text-align: center;
@@ -1990,6 +2059,14 @@ section {
         justify-content: center;
         gap: 16px;
     }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .contact-info {
+        gap: 12px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1998,20 +2075,80 @@ section {
     }
 
     .section-title {
-        font-size: 28px;
+        font-size: 24px;
+    }
+
+    .section-header {
+        margin-bottom: 32px;
+    }
+
+    .hero {
+        padding: 100px 0 60px;
     }
 
     .hero-title {
         font-size: 28px;
     }
 
+    .hero-badge {
+        font-size: 12px;
+        padding: 6px 12px;
+        margin-bottom: 24px;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+    }
+
+    .profile-card {
+        padding: 24px;
+    }
+
     .profile-image-wrapper {
-        width: 150px;
-        height: 150px;
+        width: 140px;
+        height: 140px;
+    }
+
+    .profile-info h3 {
+        font-size: 20px;
     }
 
     .stat-number {
+        font-size: 24px;
+    }
+
+    .stat-label {
+        font-size: 11px;
+    }
+
+    .clients-section {
+        padding: 40px 0;
+    }
+
+    .clients-label {
+        font-size: 11px;
+        margin-bottom: 24px;
+    }
+
+    .about-lead {
+        font-size: 16px;
+    }
+
+    .about-card {
+        padding: 24px;
+    }
+
+    .about-stats-grid {
+        gap: 16px;
+    }
+
+    .about-stat-number {
         font-size: 28px;
+    }
+
+    .highlight-item {
+        flex-direction: column;
+        text-align: center;
     }
 
     .timeline-card,
@@ -2019,6 +2156,140 @@ section {
     .cert-card,
     .edu-card,
     .contact-form-wrapper {
-        padding: 24px;
+        padding: 20px;
+    }
+
+    .job-title {
+        font-size: 18px;
+    }
+
+    .company-link {
+        font-size: 14px;
+    }
+
+    .company-partner {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+
+    .company-location {
+        padding: 3px 8px;
+        font-size: 11px;
+    }
+
+    .job-responsibilities li {
+        font-size: 13px;
+    }
+
+    .tool-tag {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+
+    .project-mockup {
+        padding: 30px;
+    }
+
+    .project-badge {
+        font-size: 12px;
+    }
+
+    .project-title {
+        font-size: 22px;
+    }
+
+    .project-subtitle {
+        font-size: 15px;
+    }
+
+    .project-description {
+        font-size: 14px;
+    }
+
+    .tech-tag {
+        font-size: 11px;
+        padding: 6px 12px;
+    }
+
+    .category-title {
+        font-size: 16px;
+    }
+
+    .skill-name {
+        font-size: 13px;
+    }
+
+    .cert-title {
+        font-size: 16px;
+    }
+
+    .cert-description {
+        font-size: 13px;
+    }
+
+    .cert-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .edu-degree {
+        font-size: 16px;
+    }
+
+    .edu-details {
+        gap: 12px;
+    }
+
+    .detail-value {
+        font-size: 14px;
+    }
+
+    .courses-list span {
+        font-size: 11px;
+        padding: 4px 10px;
+    }
+
+    .contact-description {
+        font-size: 14px;
+    }
+
+    .contact-item {
+        padding: 16px;
+    }
+
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .contact-value {
+        font-size: 14px;
+    }
+
+    .social-link {
+        width: 42px;
+        height: 42px;
+    }
+
+    .form-group label {
+        font-size: 13px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    .footer {
+        padding: 40px 0 24px;
+    }
+
+    .footer-links {
+        gap: 12px;
+    }
+
+    .footer-links a {
+        font-size: 13px;
     }
 }
