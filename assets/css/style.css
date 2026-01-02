@@ -570,13 +570,13 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
 }
 
-/* Marquee Animation */
+/* Marquee Animation - moves each content block by 100% of its width */
 @keyframes marqueeScroll {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
     }
 }
 
@@ -1937,28 +1937,31 @@ section {
     }
 
     .clients-marquee {
-        display: block !important;
+        display: flex !important;
         overflow: hidden;
         width: 100%;
-        padding: 10px 0;
+        padding: 15px 0;
     }
 
-    .marquee-track {
-        display: flex !important;
-        width: max-content;
-        gap: 50px;
-        animation: marqueeScroll 10s linear infinite;
-    }
-
-    .marquee-track .client-item {
+    .marquee-content {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding-right: 20px;
+        animation: marqueeScroll 12s linear infinite;
         flex-shrink: 0;
     }
 
-    .marquee-track .client-name {
+    .marquee-content .client-name {
         font-size: 16px;
         font-weight: 600;
         white-space: nowrap;
         color: rgba(255, 255, 255, 0.6);
+    }
+
+    .marquee-separator {
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 10px;
     }
 }
 
@@ -2024,28 +2027,31 @@ section {
     }
 
     .clients-marquee {
-        display: block !important;
+        display: flex !important;
         overflow: hidden;
         width: 100%;
-        padding: 10px 0;
+        padding: 12px 0;
     }
 
-    .marquee-track {
-        display: flex !important;
-        width: max-content;
-        gap: 40px;
-        animation: marqueeScroll 8s linear infinite;
-    }
-
-    .marquee-track .client-item {
+    .marquee-content {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding-right: 16px;
+        animation: marqueeScroll 10s linear infinite;
         flex-shrink: 0;
     }
 
-    .marquee-track .client-name {
+    .marquee-content .client-name {
         font-size: 15px;
         font-weight: 600;
         white-space: nowrap;
         color: rgba(255, 255, 255, 0.6);
+    }
+
+    .marquee-separator {
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 8px;
     }
 
     .timeline-item {
