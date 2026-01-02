@@ -570,6 +570,16 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
 }
 
+/* Marquee Animation */
+@keyframes marqueeScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 /* ============================================
    SECTION STYLES
    ============================================ */
@@ -1980,22 +1990,23 @@ section {
 
     /* Hide desktop grid, show marquee on mobile */
     .clients-desktop {
-        display: none;
+        display: none !important;
     }
 
     .clients-marquee {
-        display: block;
+        display: block !important;
         overflow: hidden;
         position: relative;
         width: 100%;
-        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
         -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
     }
 
     .marquee-track {
-        display: flex;
+        display: flex !important;
+        flex-direction: row !important;
         gap: 48px;
-        animation: marquee 20s linear infinite;
+        animation: marqueeScroll 15s linear infinite;
         width: max-content;
     }
 
@@ -2004,18 +2015,9 @@ section {
         opacity: 0.7;
     }
 
-    .client-name {
+    .marquee-track .client-name {
         font-size: 16px;
         white-space: nowrap;
-    }
-
-    @keyframes marquee {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-50%);
-        }
     }
 
     .timeline-item {
