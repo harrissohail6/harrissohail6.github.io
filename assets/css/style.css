@@ -1998,26 +1998,27 @@ section {
         overflow: hidden;
         position: relative;
         width: 100%;
-        -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        padding: 10px 0;
     }
 
     .marquee-track {
         display: flex !important;
         flex-direction: row !important;
-        gap: 48px;
-        animation: marqueeScroll 15s linear infinite;
-        width: max-content;
+        align-items: center;
+        gap: 40px;
+        animation: marqueeScroll 12s linear infinite;
+        width: fit-content;
     }
 
     .marquee-track .client-item {
         flex-shrink: 0;
-        opacity: 0.7;
     }
 
     .marquee-track .client-name {
         font-size: 16px;
         white-space: nowrap;
+        color: var(--color-text-secondary);
+        opacity: 0.7;
     }
 
     .timeline-item {
