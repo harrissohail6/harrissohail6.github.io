@@ -1988,26 +1988,32 @@ section {
         display: none;
     }
 
-    /* Hide desktop grid, show marquee on mobile */
+    /* Mobile: Show both grids stacked for now - marquee via horizontal scroll */
     .clients-desktop {
         display: none !important;
     }
 
     .clients-marquee {
-        display: block !important;
-        overflow: hidden;
-        position: relative;
-        width: 100%;
+        display: flex !important;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
         padding: 10px 0;
+    }
+
+    .clients-marquee::-webkit-scrollbar {
+        display: none;
     }
 
     .marquee-track {
         display: flex !important;
         flex-direction: row !important;
         align-items: center;
-        gap: 40px;
-        animation: marqueeScroll 12s linear infinite;
-        width: fit-content;
+        gap: 32px;
+        padding: 0 20px;
+        animation: marqueeScroll 15s linear infinite;
     }
 
     .marquee-track .client-item {
@@ -2015,10 +2021,10 @@ section {
     }
 
     .marquee-track .client-name {
-        font-size: 16px;
+        font-size: 15px;
+        font-weight: 600;
         white-space: nowrap;
-        color: var(--color-text-secondary);
-        opacity: 0.7;
+        color: rgba(255, 255, 255, 0.6);
     }
 
     .timeline-item {
