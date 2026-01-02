@@ -1930,6 +1930,41 @@ section {
     .contact-content .section-header {
         text-align: center;
     }
+
+    /* Tablet: Show marquee instead of grid */
+    .clients-desktop {
+        display: none !important;
+    }
+
+    .clients-marquee {
+        display: flex !important;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding: 10px 0;
+    }
+
+    .clients-marquee::-webkit-scrollbar {
+        display: none;
+    }
+
+    .marquee-track {
+        display: flex !important;
+        gap: 40px;
+        padding: 0 20px;
+        animation: marqueeScroll 15s linear infinite;
+    }
+
+    .marquee-track .client-item {
+        flex-shrink: 0;
+    }
+
+    .marquee-track .client-name {
+        font-size: 16px;
+        font-weight: 600;
+        white-space: nowrap;
+        color: rgba(255, 255, 255, 0.6);
+    }
 }
 
 @media (max-width: 768px) {
