@@ -1937,22 +1937,17 @@ section {
     }
 
     .clients-marquee {
-        display: flex !important;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
+        display: block !important;
+        overflow: hidden;
+        width: 100%;
         padding: 10px 0;
-    }
-
-    .clients-marquee::-webkit-scrollbar {
-        display: none;
     }
 
     .marquee-track {
         display: flex !important;
-        gap: 40px;
-        padding: 0 20px;
-        animation: marqueeScroll 15s linear infinite;
+        width: max-content;
+        gap: 50px;
+        animation: marqueeScroll 10s linear infinite;
     }
 
     .marquee-track .client-item {
@@ -2023,32 +2018,23 @@ section {
         display: none;
     }
 
-    /* Mobile: Show both grids stacked for now - marquee via horizontal scroll */
+    /* Mobile: Seamless marquee */
     .clients-desktop {
         display: none !important;
     }
 
     .clients-marquee {
-        display: flex !important;
-        overflow-x: auto;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
+        display: block !important;
+        overflow: hidden;
+        width: 100%;
         padding: 10px 0;
-    }
-
-    .clients-marquee::-webkit-scrollbar {
-        display: none;
     }
 
     .marquee-track {
         display: flex !important;
-        flex-direction: row !important;
-        align-items: center;
-        gap: 32px;
-        padding: 0 20px;
-        animation: marqueeScroll 15s linear infinite;
+        width: max-content;
+        gap: 40px;
+        animation: marqueeScroll 8s linear infinite;
     }
 
     .marquee-track .client-item {
