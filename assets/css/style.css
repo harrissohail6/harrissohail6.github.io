@@ -371,7 +371,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .stat-item {
-    text-align: left;
+    text-align: center;
 }
 
 .stat-number {
@@ -563,6 +563,11 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     color: var(--color-text-secondary);
     letter-spacing: 0.02em;
+}
+
+/* Mobile Marquee - Hidden on desktop */
+.clients-marquee {
+    display: none;
 }
 
 /* ============================================
@@ -1973,13 +1978,44 @@ section {
         display: none;
     }
 
-    .clients-grid {
-        gap: 24px;
-        flex-direction: column;
+    /* Hide desktop grid, show marquee on mobile */
+    .clients-desktop {
+        display: none;
+    }
+
+    .clients-marquee {
+        display: block;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+
+    .marquee-track {
+        display: flex;
+        gap: 48px;
+        animation: marquee 20s linear infinite;
+        width: max-content;
+    }
+
+    .marquee-track .client-item {
+        flex-shrink: 0;
+        opacity: 0.7;
     }
 
     .client-name {
         font-size: 16px;
+        white-space: nowrap;
+    }
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
     }
 
     .timeline-item {
