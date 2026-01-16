@@ -2400,3 +2400,230 @@ section {
         font-size: 13px;
     }
 }
+
+/* ============================================
+   RESUME/CV DOWNLOAD SECTION
+   ============================================ */
+
+.resume-section {
+    padding: var(--section-padding) 0;
+    background: var(--color-bg-secondary);
+    position: relative;
+}
+
+.resume-section .section-description {
+    color: var(--color-text-secondary);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 16px auto 0;
+    text-align: center;
+}
+
+.resume-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.resume-card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 32px;
+    position: relative;
+    transition: all var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+}
+
+.resume-card:hover {
+    border-color: var(--color-border-hover);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.resume-card.featured {
+    border-color: var(--color-accent-primary);
+    background: linear-gradient(135deg, rgba(246, 130, 31, 0.05) 0%, rgba(251, 173, 65, 0.02) 100%);
+}
+
+.resume-card.featured:hover {
+    border-color: var(--color-accent-secondary);
+    box-shadow: 0 10px 40px rgba(246, 130, 31, 0.2);
+}
+
+.resume-badge {
+    position: absolute;
+    top: -12px;
+    right: 24px;
+    background: var(--gradient-primary);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.resume-badge i {
+    font-size: 10px;
+}
+
+.resume-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(246, 130, 31, 0.1) 0%, rgba(251, 173, 65, 0.05) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.resume-icon i {
+    font-size: 28px;
+    color: var(--color-accent-primary);
+}
+
+.resume-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 4px;
+}
+
+.resume-subtitle {
+    font-size: 0.9rem;
+    color: var(--color-accent-primary);
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.resume-description {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+.resume-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.resume-tag {
+    background: rgba(246, 130, 31, 0.1);
+    color: var(--color-accent-secondary);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.resume-features {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.resume-features .feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+}
+
+.resume-features .feature i {
+    color: #22c55e;
+    font-size: 14px;
+}
+
+.resume-card .btn-full {
+    width: 100%;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.resume-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 32px;
+    padding: 20px 24px;
+    background: rgba(246, 130, 31, 0.05);
+    border: 1px solid rgba(246, 130, 31, 0.2);
+    border-radius: 12px;
+}
+
+.resume-note i {
+    color: var(--color-accent-primary);
+    font-size: 18px;
+    margin-top: 2px;
+}
+
+.resume-note p {
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Resume Section Responsive */
+@media (max-width: 992px) {
+    .resume-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .resume-card.featured {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .resume-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-card.featured {
+        grid-column: span 1;
+    }
+
+    .resume-card {
+        padding: 24px;
+    }
+
+    .resume-section .section-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .resume-icon {
+        width: 56px;
+        height: 56px;
+    }
+
+    .resume-icon i {
+        font-size: 24px;
+    }
+
+    .resume-title {
+        font-size: 1.2rem;
+    }
+
+    .resume-tags {
+        gap: 6px;
+    }
+
+    .resume-tag {
+        font-size: 11px;
+        padding: 3px 10px;
+    }
+}
