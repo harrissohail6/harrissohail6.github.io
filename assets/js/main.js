@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSkillBars();
     initRotatingText();
     initContactForm();
+    initBackToTop();
 });
 
 /* ============================================
@@ -513,6 +514,31 @@ function initPreloader() {
         setTimeout(() => {
             preloader.remove();
         }, 500);
+    });
+}
+
+/* ============================================
+   BACK TO TOP BUTTON
+   ============================================ */
+function initBackToTop() {
+    const backToTopBtn = document.getElementById('backToTop');
+    if (!backToTopBtn) return;
+
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', throttle(() => {
+        if (window.pageYOffset > 400) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    }, 100));
+
+    // Scroll to top when clicked
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
 }
 
