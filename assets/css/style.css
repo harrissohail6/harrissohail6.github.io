@@ -2629,6 +2629,147 @@ section {
 }
 
 /* ============================================
+   SEMESTER PROJECTS SECTION
+   ============================================ */
+.semester-projects-section {
+    padding: var(--section-padding) 0;
+    background: var(--color-bg-secondary);
+}
+
+.semester-projects-section .section-description {
+    color: var(--color-text-secondary);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 16px auto 0;
+    text-align: center;
+}
+
+.semester-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.semester-project-card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 28px;
+    transition: all var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.semester-project-card:hover {
+    border-color: var(--color-accent-primary);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 40px rgba(246, 130, 31, 0.15);
+}
+
+.project-card-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(246, 130, 31, 0.1) 0%, rgba(251, 173, 65, 0.05) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent-primary);
+    font-size: 24px;
+}
+
+.project-card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card-course {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-accent-primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.project-card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.project-card-desc {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    flex: 1;
+    margin-bottom: 16px;
+}
+
+.project-card-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.project-card-tech span {
+    padding: 5px 12px;
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-size: 11px;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+    .semester-projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .semester-projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .semester-projects-section .section-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .semester-project-card {
+        padding: 20px;
+    }
+
+    .project-card-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+    }
+
+    .project-card-title {
+        font-size: 1.05rem;
+    }
+
+    .project-card-desc {
+        font-size: 13px;
+    }
+
+    .project-card-tech span {
+        font-size: 10px;
+        padding: 4px 10px;
+    }
+}
+
+/* ============================================
    LANGUAGE SKILLS SECTION
    ============================================ */
 .languages-grid {
