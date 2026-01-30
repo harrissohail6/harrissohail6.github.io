@@ -2629,6 +2629,251 @@ section {
 }
 
 /* ============================================
+   LANGUAGE SKILLS SECTION
+   ============================================ */
+.languages-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.language-card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    padding: 32px;
+    position: relative;
+    transition: all var(--transition-normal);
+}
+
+.language-card:hover {
+    border-color: var(--color-border-hover);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.language-card.featured {
+    border-color: var(--color-accent-primary);
+    background: linear-gradient(135deg, rgba(246, 130, 31, 0.05) 0%, rgba(251, 173, 65, 0.02) 100%);
+}
+
+.language-card.featured:hover {
+    box-shadow: 0 10px 40px rgba(246, 130, 31, 0.2);
+}
+
+.language-badge {
+    position: absolute;
+    top: -12px;
+    right: 24px;
+    background: var(--gradient-primary);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.language-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.language-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(246, 130, 31, 0.1) 0%, rgba(251, 173, 65, 0.05) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent-primary);
+    font-size: 24px;
+}
+
+.language-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 4px;
+}
+
+.language-level {
+    font-size: 14px;
+    color: var(--color-accent-primary);
+    font-weight: 600;
+}
+
+.language-level.native {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.language-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lang-skill {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lang-skill-name {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+}
+
+.lang-skill-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.lang-skill-dots .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+}
+
+.lang-skill-dots .dot.filled {
+    background: var(--gradient-primary);
+    border-color: var(--color-accent-primary);
+}
+
+.ielts-score {
+    margin-bottom: 20px;
+}
+
+.ielts-overall {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(246, 130, 31, 0.1) 0%, rgba(251, 173, 65, 0.05) 100%);
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.ielts-band {
+    display: block;
+    font-size: 3rem;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+}
+
+.ielts-label {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.ielts-breakdown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.ielts-skill {
+    text-align: center;
+    padding: 12px 8px;
+    background: var(--color-bg-tertiary);
+    border-radius: 10px;
+    border: 1px solid var(--color-border);
+}
+
+.ielts-skill-score {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 4px;
+}
+
+.ielts-skill-name {
+    font-size: 11px;
+    color: var(--color-text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.ielts-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border);
+}
+
+.ielts-date {
+    font-size: 13px;
+    color: var(--color-text-tertiary);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+@media (max-width: 768px) {
+    .languages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ielts-breakdown {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ielts-band {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .language-card {
+        padding: 24px;
+    }
+
+    .language-header {
+        gap: 12px;
+    }
+
+    .language-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+    }
+
+    .language-name {
+        font-size: 1.2rem;
+    }
+
+    .ielts-skill {
+        padding: 10px 6px;
+    }
+
+    .ielts-skill-score {
+        font-size: 1.1rem;
+    }
+
+    .ielts-footer {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+}
+
+/* ============================================
    BACK TO TOP BUTTON
    ============================================ */
 .back-to-top {
