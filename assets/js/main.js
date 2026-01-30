@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initRotatingText();
     initContactForm();
     initBackToTop();
+    initThemeToggle();
 });
 
 /* ============================================
@@ -405,19 +406,33 @@ function initMagneticButtons() {
    DARK/LIGHT THEME TOGGLE (FUTURE)
    ============================================ */
 function initThemeToggle() {
-    const toggle = document.querySelector('.theme-toggle');
-    if (!toggle) return;
+    const toggle = document.getElementById('themeToggle');
+    const icon = document.getElementById('themeIcon');
+    if (!toggle || !icon) return;
 
-    const currentTheme = localStorage.getItem('theme') || 'dark';
-    document.documentElement.setAttribute('data-theme', currentTheme);
+    // Get saved theme or default to dark
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    updateThemeIcon(icon, savedTheme);
 
     toggle.addEventListener('click', () => {
-        const theme = document.documentElement.getAttribute('data-theme');
-        const newTheme = theme === 'dark' ? 'light' : 'dark';
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
         document.documentElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
+        updateThemeIcon(icon, newTheme);
     });
+}
+
+function updateThemeIcon(icon, theme) {
+    if (theme === 'light') {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+    } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+    }
 }
 
 /* ============================================
